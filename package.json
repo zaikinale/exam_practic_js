@@ -1,0 +1,12 @@
+{
+    "name": "exam-csv-analyzer",
+    "version": "1.0.0",
+    "description": "Exam project for CSV analysis",
+    "scripts": {
+      "start": "node bin/analyze.js",
+      "test": "jest"
+    },
+    "devDependencies": {
+      "jest": "^29.0.0"
+    }
+  }
