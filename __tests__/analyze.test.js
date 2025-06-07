@@ -5,7 +5,7 @@ import path from 'path';
 function runTest(csvFileName) {
   const fixturePath = path.resolve('__fixtures__', csvFileName);
   const data = fs.readFileSync(fixturePath, 'utf-8');
-  
+
   const logSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
   analyze(data);
   return logSpy.mock.calls.map(call => call[0]);
@@ -29,7 +29,7 @@ describe('CSV Analyzer', () => {
       'Count: 9',
       'Castles: Замок, Оплот',
       'Largest hp: ангел',
-      'Average damage: единорог: 20, кентавр: 2.5, копейщик: 2, лучник: 2.5, грифон: 4.5, рыцарь: 7.5, кавалерист: 20, дракон: 47.5, ангел: 50',
+      'Average damage: единорог: 20, кентавр: 2.5, копейщик: 2, лучник: 2.5, грифон: 4.5, рыцарь: 7.5, кавалерист: 20, дракон: 47.5, ангел: 50, зомби: 25',
       'Strongest creature: ангел'
     ]);
   });
